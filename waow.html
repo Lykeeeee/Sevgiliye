@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seni Seviyorum🎀</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+        img {
+            width: 400px;
+            height: auto;
+        }
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            position: relative;
+            border: none;
+        }
+        #evet {
+            background-color: green;
+            color: white;
+        }
+        #hayir {
+            background-color: black;
+            color: white;
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <img src="WAFAW.jpg" alt="Üstteki Resim" height="3000" width="3000">  //Resminizi buraya ekleyin
+    <h1>Özür dilerim Barışsak olur mu???</h1>
+    <div class="buttons">
+        <button id="evet" onclick="location.href='evet.html'">Evet</button>
+        <button id="hayir" onclick="location.href='hayir.html'">Hayır</button>
+    </div>
+    
+    <script>
+        const hayirButton = document.getElementById("hayir");
+        
+        hayirButton.addEventListener("mouseenter", function() {
+            const maxX = window.innerWidth - hayirButton.clientWidth - 20;
+            const maxY = window.innerHeight - hayirButton.clientHeight - 20;
+            
+            const x = Math.random() * maxX;
+            const y = Math.random() * maxY;
+            
+            hayirButton.style.position = "absolute";
+            hayirButton.style.left = `${x}px`;
+            hayirButton.style.top = `${y}px`;
+        });
+    </script>
+</body>
+</html>
