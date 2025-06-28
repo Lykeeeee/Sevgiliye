@@ -1,0 +1,1 @@
+Sevgilinizle kavga ederseniz yararlı bir internet sitesi şablonu
